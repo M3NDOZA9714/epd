@@ -5,6 +5,7 @@ import DynamicBackground from "../components/video";
 import miVideo from "../assets/videoHome.mp4";
 import imgSobreNosotros from "../assets/img - Sobre nosotros.jpg";
 import nuestorProyectos from "../assets/nuestrosProyectos.png";
+import epc from "../assets/img - EPC.jpg";
 
 export const HomePage = (): JSX.Element => {
   const svgCheck = (
@@ -482,12 +483,83 @@ export const HomePage = (): JSX.Element => {
         </div>
       </section>
 
+      {/*Servicios*/}
+      <section className="px-[135px] py-[142px]">
+        {/*Card 1*/}
+        <div className="grid grid-cols-2 gap-[32px]">
+          <div className="relative h-full w-full">
+            <img
+              className="object-cover rounded-3xl bg-transparent"
+              src={epc}
+              alt=""
+            />
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent rounded-3xl"></div>
+            <div className="absolute inset-0 z-20 flex flex-col justify-end p-8 text-left">
+              {/* Título */}
+              <p className="text-white font-poppins text-base font-semibold leading-relaxed">
+                EPCs
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-[80px]">
+            <span className="px-[16px] flex w-[168px] items-center justify-center rounded-full border border-white/15 bg-[#A11E1F] shadow-inner-white-custom backdrop-blur-sm text-white font-poppins text-base font-medium leading-relaxed">
+              Servicios
+            </span>
+
+            <p className="text-[#14559C] font-poppins text-2xl font-bold leading-none self-stretch">
+              EPCs
+            </p>
+
+            <p className="text-black font-poppins text-xl font-normal leading-relaxed">
+              Proyectos EPC que integran ingeniería, suministro, construcción y
+              puesta en marcha para plantas de generación, líneas de transmisión
+              y subestaciones eléctricas, abarcando obras civiles, eléctricas y
+              mecánicas.
+            </p>
+          </div>
+        </div>
+
+        {/*Card 2*/}
+        <div className="grid grid-cols-2 gap-[32px]">
+          <div className="relative h-full w-full">
+            <img
+              className="object-cover rounded-3xl bg-transparent"
+              src={epc}
+              alt=""
+            />
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent rounded-3xl"></div>
+            <div className="absolute inset-0 z-20 flex flex-col justify-end p-8 text-left">
+              {/* Título */}
+              <p className="text-white font-poppins text-base font-semibold leading-relaxed">
+                EPCs
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-[80px]">
+            <span className="px-[16px] flex w-[168px] items-center justify-center rounded-full border border-white/15 bg-[#A11E1F] shadow-inner-white-custom backdrop-blur-sm text-white font-poppins text-base font-medium leading-relaxed">
+              Servicios
+            </span>
+
+            <p className="text-[#14559C] font-poppins text-2xl font-bold leading-none self-stretch">
+              EPCs
+            </p>
+
+            <p className="text-black font-poppins text-xl font-normal leading-relaxed">
+              Proyectos EPC que integran ingeniería, suministro, construcción y
+              puesta en marcha para plantas de generación, líneas de transmisión
+              y subestaciones eléctricas, abarcando obras civiles, eléctricas y
+              mecánicas.
+            </p>
+          </div>
+        </div>
+
+        
+      </section>
+
       {/* Sección Proyectos Destacados */}
       <section className="bg-gradient-to-b from-gray-50 to-white w-full">
         <DynamicBackground mediaType="image" mediaSource={nuestorProyectos}>
-          <div>
-              hola
-          </div>
+          <div>hola</div>
         </DynamicBackground>
       </section>
 

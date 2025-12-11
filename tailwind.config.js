@@ -11,8 +11,9 @@ module.exports = {
         "custom-blue": "0 0 4px 0 #14559C",
         "inner-white": "inset 0 0 6px 3px rgba(255, 255, 255, 0.25)",
         'outline-blue': '0 0 4px 0 #0094D9',
+        'inner-white-custom': 'inset 0 0 6px 3px rgba(255, 255, 255, 0.25)'
       },
     },
   },
   plugins: [],
-};
+}
