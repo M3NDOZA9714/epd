@@ -1,4 +1,6 @@
-import { ReactNode } from "react";
+import { hover } from "@testing-library/user-event/dist/hover";
+import { ReactNode, useEffect, useRef, useState } from "react";
+import { ArrowRight } from "react-feather";
 
 // ============================================================================
 // BUTTON ARROW - Botón con efecto de flecha deslizante
@@ -19,56 +21,39 @@ export const ButtonArrow = ({
   size = "md",
   className = "",
 }: ButtonArrowProps) => {
+  const CALC_TRANSLATE_CLASS = "translate-x-[calc(100%-42px)]";
   const baseStyles =
-    "relative inline-flex items-center gap-2 font-poppins font-semibold rounded-full transition-all duration-300 overflow-hidden";
+    "h-[42px] relative inline-flex items-center font-poppins font-semibold rounded-full transition-all duration-300 overflow-hidden";
 
   const variantStyles = {
-    primary:
-      "bg-white/10 border border-[#0094D9] text-[#0094D9] hover:text-white",
+    primary: "border border-[#0094D9] text-[#0094D9] hover:text-white",
     secondary:
       "bg-white/10 border border-[#A11E1F] text-[#A11E1F] hover:text-white",
-    outline: "bg-transparent border border-[#0094D9] text-[#0094D9] hover:text-white",
-  };
-
-  const sizeStyles = {
-    sm: "px-3 py-2 text-xs sm:text-sm",
-    md: "px-4 sm:px-6 py-3 text-sm sm:text-base",
-    lg: "px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg",
+    outline:
+      "bg-transparent border border-[#0094D9] text-[#0094D9] hover:text-white",
   };
 
   const gradientColor = {
-    primary: "from-[#0094D9] to-[#00539F]",
-    secondary: "from-[#A11E1F] to-[#84191A]",
+    primary: "from-[#00539F] to-[#0094D9] shadow-[0_0_4px_0_#14559C]",
+    secondary: "from-[#A11E1F] to-[#E83A3B] shadow-[0_0_4px_0_#14559C]",
     outline: "from-[#0094D9] to-[#00539F]",
   };
 
   return (
     <button
       onClick={onClick}
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className} group`}
-    >
+      className={`${baseStyles} ${variantStyles[variant]} ${className} group`}>
       {/* Fondo deslizante con gradiente */}
       <div
-        className={`absolute inset-0 bg-gradient-to-r ${gradientColor[variant]} transform -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out z-0`}
-      ></div>
+        className={`absolute w-[42px] h-[42px] left-0 p-[10px] border border-[#8AABE5] rounded-full bg-gradient-to-l ${gradientColor[variant]} group-hover:w-full transition-all duration-500 ease-out z-0`}>
+        <div className="transition-all ease-in-out duration-500 group-hover:translate-x-full-minus-arrow">
+          <ArrowRight />
+        </div>
+      </div>
 
       {/* Contenido (texto e icono) */}
-      <div className="relative z-10 flex items-center gap-2">
-        <span>{children}</span>
-        <svg
-          className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 transform group-hover:translate-x-1 transition-transform duration-300"
-          viewBox="0 0 18 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1 8H17M17 8L10.1429 1M17 8L10.1429 15"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+      <div className="relative z-10 flex items-center ml-[42px] transition-all group-hover:-translate-x-[42px] ease-in-out duration-500">
+        <span className="p-[10px]">{children}</span>
       </div>
     </button>
   );
@@ -119,8 +104,7 @@ export const Button = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
-    >
+      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}>
       {children}
     </button>
   );
@@ -143,7 +127,8 @@ export const Badge = ({
   size = "md",
   className = "",
 }: BadgeProps) => {
-  const baseStyles = "inline-flex items-center font-poppins font-medium rounded-full";
+  const baseStyles =
+    "inline-flex items-center font-poppins font-medium rounded-full";
 
   const variantStyles = {
     primary: "bg-[#0094D9] text-white border border-[#0094D9]",
@@ -160,8 +145,7 @@ export const Badge = ({
 
   return (
     <span
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
-    >
+      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}>
       {children}
     </span>
   );
@@ -200,8 +184,7 @@ export const Section = ({
 
   return (
     <section
-      className={`w-full ${bgStyles[bgColor]} ${paddingStyles[padding]} ${className}`}
-    >
+      className={`w-full ${bgStyles[bgColor]} ${paddingStyles[padding]} ${className}`}>
       {children}
     </section>
   );
@@ -241,8 +224,7 @@ export const Heading = ({
 
   return (
     <Component
-      className={`font-poppins ${sizeMap[level]} ${colorStyles[color]} leading-tight ${className}`}
-    >
+      className={`font-poppins ${sizeMap[level]} ${colorStyles[color]} leading-tight ${className}`}>
       {children}
     </Component>
   );
@@ -279,8 +261,7 @@ export const Paragraph = ({
 
   return (
     <p
-      className={`font-poppins ${sizeStyles[size]} ${colorStyles[color]} leading-relaxed ${className}`}
-    >
+      className={`font-poppins ${sizeStyles[size]} ${colorStyles[color]} leading-relaxed ${className}`}>
       {children}
     </p>
   );

@@ -23,8 +23,7 @@ const AboutUsSection = ({
       height="20"
       viewBox="0 0 20 20"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <path
         d="M0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10Z"
         fill="url(#paint0_linear_1_2752)"
@@ -43,8 +42,7 @@ const AboutUsSection = ({
           y1="0"
           x2="10"
           y2="20"
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop stopColor="#0094D9" />
           <stop offset="1" stopColor="#00539F" />
         </linearGradient>
@@ -68,9 +66,9 @@ const AboutUsSection = ({
 
           <div className="text-[#364153] font-poppins text-sm sm:text-base leading-relaxed space-y-3 sm:space-y-4">
             <p>
-              Somos una empresa líder en el sector energético con más de 18
-              años de experiencia desarrollando soluciones EPC e ingeniería
-              integral —eléctrica, mecánica y civil.
+              Somos una empresa líder en el sector energético con más de 18 años
+              de experiencia desarrollando soluciones EPC e ingeniería integral
+              —eléctrica, mecánica y civil.
             </p>
             <p>
               Vivimos nuestro lema{" "}
@@ -118,8 +116,8 @@ const AboutUsSection = ({
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="mt-4 sm:mt-6 w-fit">
+          {/* CTA Button - Centrado en móvil */}
+          <div className="mt-4 sm:mt-6 w-full sm:w-fit flex justify-center">
             <ButtonArrow variant="outline" size="md">
               Ver Más
             </ButtonArrow>
@@ -150,13 +148,14 @@ const AboutUsSection = ({
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="rounded-2xl border-t border-l border-r border-gray-100 bg-white shadow-lg flex flex-col justify-between hover:shadow-xl transition"
-          >
+            className="rounded-2xl border-t border-l border-r border-gray-100 bg-white shadow-lg flex flex-col justify-between hover:shadow-xl transition h-full">
             <div className="flex flex-col space-y-3 sm:space-y-4 px-4 sm:px-6 md:px-8 py-6 sm:py-8">
-              <div className={`rounded-xl ${feature.bgColor} w-14 sm:w-16 flex items-center justify-center p-3`}>
+              <div
+                className={`rounded-xl ${feature.bgColor} w-14 sm:w-16 flex items-center justify-center p-3`}>
                 {feature.icon}
               </div>
-              <p className={`${feature.borderColor} font-poppins text-sm sm:text-base font-medium`}>
+              <p
+                className={`${feature.borderColor} font-poppins text-sm sm:text-base font-medium`}>
                 {feature.title}
               </p>
               <p className="text-gray-700 font-poppins text-xs sm:text-sm leading-relaxed">

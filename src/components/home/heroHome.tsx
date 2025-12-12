@@ -19,7 +19,7 @@ export const HeroHome = (): JSX.Element => {
 
       {/* CTA Button */}
       <div className="mt-4 sm:mt-6 md:mt-8">
-        <ButtonArrow variant="outline" size="md">
+        <ButtonArrow variant="primary" size="md">
           Contáctanos
         </ButtonArrow>
       </div>

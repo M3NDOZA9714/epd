@@ -46,16 +46,14 @@ export const OurProjects = ({ projects }: ProjectsProps): JSX.Element => {
           </div>
         </div>
         <div className="w-full space-y-8 md:space-y-12">
-          {/* Main Carousel - Showing multiple items on desktop, 1 on mobile */}
           <div className="flex justify-center px-4 sm:px-6 md:px-8">
-            {/* Container with max width and relative positioning for navigation buttons */}
             <div className="relative w-full max-w-7xl mx-auto">
               <div
-                className="overflow-hidden rounded-2xl md:rounded-3xl" // CSS Variable para la distancia de movimiento (se define responsive en CSS externo)
+                className="overflow-hidden rounded-2xl md:rounded-3xl"
                 style={{ "--slide-distance": "100%" } as React.CSSProperties}>
                 {/* Slide Track (The one that moves) */}
                 <div
-                  className="h-[500px] transition-transform duration-500 ease-in-out flex items-stretch gap-6"
+                  className="h-[400px] sm:h-[450px] md:h-[500px] transition-transform duration-500 ease-in-out flex items-stretch gap-6"
                   style={{
                     transform: `translateX(calc(-${currentIndex} * var(--slide-distance)))`,
                   }}>

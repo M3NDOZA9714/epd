@@ -6,21 +6,29 @@ import assurance from "../assets/Logo - Assurance Quality.svg";
 
 export const Footer = (): JSX.Element => {
   return (
-    <section className="bg-[#315696]">
-      <div className="grid grid-cols-5 ">
-        <div className="space-y-11">
-          <img src={logo} width="159px" alt="" />
-          <p className="text-white font-poppins text-xs font-normal leading-4 self-stretch">
+    <section className="bg-[#315696] w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto w-full">
+        {/* Logo y Redes Sociales */}
+        <div className="flex flex-col space-y-6 sm:space-y-8 items-center sm:items-start">
+          <img
+            src={logo}
+            width="150"
+            alt="Logo Energía PD"
+            className="w-32 sm:w-40"
+          />
+          <p className="text-white font-poppins text-xs sm:text-sm text-center sm:text-left leading-relaxed">
             Líderes en soluciones energéticas integrales para Honduras y
             Centroamérica.
           </p>
-          <div className="flex space-x-8">
+          <div className="flex space-x-6 justify-center sm:justify-start">
+            {/* Facebook */}
             <svg
               width="29"
               height="29"
               viewBox="0 0 29 29"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg"
+              className="cursor-pointer hover:opacity-80 transition">
               <rect
                 x="0.5"
                 y="0.5"
@@ -34,12 +42,15 @@ export const Footer = (): JSX.Element => {
                 fill="white"
               />
             </svg>
+
+            {/* Instagram */}
             <svg
               width="29"
               height="29"
               viewBox="0 0 29 29"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg"
+              className="cursor-pointer hover:opacity-80 transition">
               <rect
                 x="0.5"
                 y="0.5"
@@ -53,12 +64,15 @@ export const Footer = (): JSX.Element => {
                 fill="white"
               />
             </svg>
+
+            {/* LinkedIn */}
             <svg
               width="27"
               height="27"
               viewBox="0 0 27 27"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg"
+              className="cursor-pointer hover:opacity-80 transition">
               <rect
                 x="0.5"
                 y="0.5"
@@ -74,45 +88,73 @@ export const Footer = (): JSX.Element => {
             </svg>
           </div>
         </div>
-        <div className=" flex flex-col space-y-5 justify-center items-center">
-          <p className="text-white font-poppins text-base font-semibold leading-snug self-stretch text-center">
+
+        {/* Certificaciones */}
+        <div className="flex flex-col space-y-6 items-center">
+          <p className="text-white font-poppins text-sm md:text-base font-semibold text-center">
             Certificación ISO 9001:2015
           </p>
-          <div className="flex space-x-4">
-            <img src={iaf} alt="" />
-            <img src={jhuez} alt="" />
-            <img src={assurance} alt="" />
+          <div className="flex gap-3 flex-wrap justify-center">
+            <img src={iaf} alt="IAF Logo" className="h-12 w-auto" />
+            <img src={jhuez} alt="Jhuez Logo" className="h-12 w-auto" />
+            <img
+              src={assurance}
+              alt="Assurance Quality Logo"
+              className="h-12 w-auto"
+            />
           </div>
         </div>
-        <div className="flex flex-col space-y-4">
-          <p className="text-white font-poppins text-base font-semibold leading-[22px] self-stretch">
+
+        {/* Enlaces Rápidos */}
+        <div className="flex flex-col space-y-4 items-center sm:items-start">
+          <p className="text-white font-poppins text-sm md:text-base font-semibold">
             Enlaces Rápidos
           </p>
-          <ul className="text-white font-poppins text-base font-normal leading-[31px] self-stretch">
-            <li>Inicio</li>
-            <li>Nosotros</li>
-            <li>EPCs</li>
-            <li>Servicios</li>
-            <li>Suministros</li>
-            <li>Contáctanos</li>
+          <ul className="text-white font-poppins text-xs sm:text-sm space-y-2 text-center sm:text-left">
+            <li className="hover:opacity-80 transition cursor-pointer">
+              Inicio
+            </li>
+            <li className="hover:opacity-80 transition cursor-pointer">
+              Nosotros
+            </li>
+            <li className="hover:opacity-80 transition cursor-pointer">EPCs</li>
+            <li className="hover:opacity-80 transition cursor-pointer">
+              Servicios
+            </li>
+            <li className="hover:opacity-80 transition cursor-pointer">
+              Suministros
+            </li>
+            <li className="hover:opacity-80 transition cursor-pointer">
+              Contáctanos
+            </li>
           </ul>
         </div>
-        <div className="flex flex-col space-y-4">
-          <p className="text-white font-poppins text-base font-semibold leading-[22px] self-stretch">
+
+        {/* Páginas Legales */}
+        <div className="flex flex-col space-y-4 items-center sm:items-start">
+          <p className="text-white font-poppins text-sm md:text-base font-semibold">
             Páginas Legales
           </p>
-          <ul className="text-white font-poppins text-base font-normal leading-[31px] self-stretch">
-            <li>Política de Privacidad</li>
-            <li>Términos y Condiciones de Uso</li>
-            <li>Ética Empresarial</li>
+          <ul className="text-white font-poppins text-xs sm:text-sm space-y-2 text-center sm:text-left">
+            <li className="hover:opacity-80 transition cursor-pointer">
+              Política de Privacidad
+            </li>
+            <li className="hover:opacity-80 transition cursor-pointer">
+              Términos y Condiciones
+            </li>
+            <li className="hover:opacity-80 transition cursor-pointer">
+              Ética Empresarial
+            </li>
           </ul>
         </div>
-        <div className="flex flex-col space-y-4">
-          <p className="text-white font-poppins text-base font-semibold leading-[22px] self-stretch">
+
+        {/* Contacto */}
+        <div className="flex flex-col space-y-4 items-center sm:items-start">
+          <p className="text-white font-poppins text-sm md:text-base font-semibold">
             Contáctanos
           </p>
-          <ul className="text-white font-poppins text-base font-normal leading-[31px] self-stretch">
-            <li className="flex gap-2 items-center">
+          <ul className="text-white font-poppins text-xs sm:text-sm space-y-3 text-center sm:text-left">
+            <li className="flex gap-2 items-center justify-center sm:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"
@@ -130,7 +172,7 @@ export const Footer = (): JSX.Element => {
               </svg>
               San Pedro Sula, Honduras
             </li>
-            <li className="flex gap-2 items-center">
+            <li className="flex gap-2 items-center justify-center sm:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"
@@ -148,7 +190,7 @@ export const Footer = (): JSX.Element => {
               </svg>
               San Salvador, El Salvador
             </li>
-            <li className="flex gap-2 items-center">
+            <li className="flex gap-2 items-center justify-center sm:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -162,7 +204,7 @@ export const Footer = (): JSX.Element => {
               </svg>
               info@energiapd.com
             </li>
-            <li className="flex gap-2 items-center">
+            <li className="flex gap-2 items-center justify-center sm:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"

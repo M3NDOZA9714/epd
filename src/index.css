@@ -2,9 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (min-width: 640px) { /* Breakpoint 'sm' de Tailwind */
-  /* 495px (ancho de la tarjeta) + 24px (gap-6) = 519px */
+/* Reset de márgenes globales para evitar bordes blancos */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Asegurar que el body no tenga scroll horizontal */
+body {
+  position: relative;
+}
+
+/* Breakpoint 'sm' de Tailwind para carrusel de proyectos */
+@media (min-width: 640px) {
   .overflow-hidden {
     --slide-distance: 519px !important; 
+  }
+}
+
+/* Móvil: usar 100vw para mostrar un card a la vez */
+@media (max-width: 639px) {
+  .overflow-hidden {
+    --slide-distance: 100vw !important;
   }
 }
