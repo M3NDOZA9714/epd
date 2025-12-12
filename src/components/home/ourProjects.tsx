@@ -34,7 +34,7 @@ export const OurProjects = ({ projects }: ProjectsProps): JSX.Element => {
         mediaType="image"
         mediaSource={nuestorProyectos}
         gradient="bg-gradient-to-tr from-[#14559C]/95 to-[#259DD7]/90">
-        <div className="p-11">
+        <div className="flex flex-col gap-[50px] p-11">
           <div className="flex justify-center items-center">
             <span className="rounded-full border border-white/15 bg-[#A11E1F] shadow-inner-white backdrop-blur-sm py-2 px-4 text-center text-white font-gotham text-xs sm:text-sm font-medium">
               Nuestros Proyectos

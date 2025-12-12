@@ -149,7 +149,7 @@ export const WhyChooseUs = (): JSX.Element => {
           Ponte en contacto y déjanos acompañarte en el desarrollo de tu próximo
           proyecto.
         </p>
-        <ButtonArrow variant="primary" size="md">
+        <ButtonArrow variant="secondary" size="md">
           Contáctanos
         </ButtonArrow>
       </div>
