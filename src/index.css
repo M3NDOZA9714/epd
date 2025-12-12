@@ -2,24 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.slide-hover-effect::before {
-  /* El gradiente que se va a mover */
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%; /* Inicia fuera del botón, a la izquierda */
-  width: 200%; /* Duplica el ancho para que la 'flecha' pueda deslizarse */
-  height: 100%;
-  z-index: -1; /* Va detrás del texto */
-
-  /* El gradiente que quieres que recorra el botón */
-  background: linear-gradient(270deg, #0094d9 8.26%, #00539f 100%);
-
-  /* Transición suave al hacer hover */
-  transition: transform 0.3s ease-in-out;
-}
-
-.slide-hover-effect:hover::before {
-  /* Al hacer hover, desliza el pseudo-elemento hacia la derecha */
-  transform: translateX(50%);
+@media (min-width: 640px) { /* Breakpoint 'sm' de Tailwind */
+  /* 495px (ancho de la tarjeta) + 24px (gap-6) = 519px */
+  .overflow-hidden {
+    --slide-distance: 519px !important; 
+  }
 }

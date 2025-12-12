@@ -3,10 +3,11 @@ import React, { ReactNode } from 'react';
 interface DynamicBackgroundProps {
   children: ReactNode;
   mediaType: 'video' | 'image';
-  mediaSource: string; 
+  mediaSource: string;
+  gradient: string
 }
 
-const DynamicBackground: React.FC<DynamicBackgroundProps> = ({ children, mediaType, mediaSource }) => {
+const DynamicBackground: React.FC<DynamicBackgroundProps> = ({ children, mediaType, mediaSource, gradient }) => {
   
   const renderBackground = () => {
     if (mediaType === 'video') {
@@ -27,7 +28,7 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({ children, mediaTy
     <div className="relative w-full h-screen overflow-hidden">
       {renderBackground()}
 
-      <div className="relative z-10 w-full h-full bg-[linear-gradient(135deg,rgba(1,56,82,0.60)_0%,rgba(20,85,156,0.52)_50%,rgba(161,30,31,0.45)_100%)]">
+      <div className={`relative z-10 w-full h-full ${gradient}`}>
         {children}
       </div>
     </div>
