@@ -5,6 +5,7 @@ interface DynamicBackgroundProps {
   mediaType: "video" | "image";
   mediaSource: string;
   gradient: string;
+  minHeight?: string;
 }
 
 const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
@@ -17,7 +18,7 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
     if (mediaType === "video") {
       return (
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
           autoPlay
           loop
           muted
@@ -30,7 +31,7 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
 
     return (
       <img
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover z-0"
         src={mediaSource}
         alt="Fondo Dinámico"
       />
@@ -38,12 +39,11 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   };
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div className={`relative w-screen h-full min-h-screen`}>
       {renderBackground()}
 
-      <div className={`relative z-10 w-full h-full ${gradient}`}>
-        {children}
-      </div>
+      <div className={`z-10 absolute inset-0 h-full ${gradient}`}></div>
+      <div className="relative z-20 w-full h-full min-h-screen">{children}</div>
     </div>
   );
 };
