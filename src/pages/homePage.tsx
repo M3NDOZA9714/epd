@@ -4,21 +4,21 @@ import { HeroHome } from "../components/home/heroHome";
 import DynamicBackground from "../components/video";
 import ServicesCarousel, { ServiceCard } from "../components/home/carousel";
 import AboutUsSection from "../components/home/aboutUs";
-import miVideo from "../assets/videoHome.mp4";
-import imgSobreNosotros from "../assets/img - Sobre nosotros.jpg";
-import epcImage from "../assets/img - EPC.jpg";
-import udeImage from "../assets/img - UDE.jpg";
-import useImage from "../assets/img - USE.jpg";
-import uatImage from "../assets/img - automatizacion y SCADA.png";
-import solarImage from "../assets/img - energia solar.jpg";
-import pcymImage from "../assets/img - PCyM.png";
-import suministrosImage from "../assets/img - suministros.png";
+import miVideo from "../assets/home/videoHome.mp4";
+import imgSobreNosotros from "../assets/home/img - Sobre nosotros.jpg";
+import epcImage from "../assets/home/img - EPC.jpg";
+import udeImage from "../assets/home/img - UDE.jpg";
+import useImage from "../assets/home/img - USE.jpg";
+import uatImage from "../assets/home/img - automatizacion y SCADA.png";
+import solarImage from "../assets/home/img - energia solar.jpg";
+import pcymImage from "../assets/home/img - PCyM.png";
+import suministrosImage from "../assets/home/img - suministros.png";
 import { OurProjects, ProjectCard } from "../components/home/ourProjects";
-import csbImage from "../assets/IMG - SAN BUENAVENTURA.jpg";
-import vgdImage from "../assets/img - VILLANUEVA GENERACION DIESEL.png";
-import leImage from "../assets/img - LA ENSENADA.jpg";
-import efImage from "../assets/img - EL FARO.png";
-import snnImage from "../assets/img - SE NUEVA NACAOME.jpg";
+import csbImage from "../assets/home/IMG - SAN BUENAVENTURA.jpg";
+import vgdImage from "../assets/home/img - VILLANUEVA GENERACION DIESEL.png";
+import leImage from "../assets/home/img - LA ENSENADA.jpg";
+import efImage from "../assets/home/img - EL FARO.png";
+import snnImage from "../assets/home/img - SE NUEVA NACAOME.jpg";
 import { WhyChooseUs } from "../components/home/whyChooseUs";
 import { Footer } from "../components/footer";
 
@@ -217,7 +217,7 @@ export const HomePage = (): JSX.Element => {
 
       <WhyChooseUs />
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };

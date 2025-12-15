@@ -1,5 +1,5 @@
 import { JSX, useState } from "react";
-import nuestorProyectos from "../../assets/nuestrosProyectos.png";
+import nuestorProyectos from "../../assets/home/nuestrosProyectos.png";
 import DynamicBackground from "../video";
 import { ChevronLeft, ChevronRight } from "react-feather";
 

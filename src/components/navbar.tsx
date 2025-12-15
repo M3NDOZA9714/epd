@@ -1,7 +1,7 @@
 import { JSX, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logoEPD from "../assets/logo-energiapd-blanco-2-1.png";
-import vector1 from "../assets/vector1.svg";
+import logoEPD from "../assets/home/logo-energiapd-blanco-2-1.png";
+import vector1 from "../assets/home/vector1.svg";
 
 export const Navbar = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

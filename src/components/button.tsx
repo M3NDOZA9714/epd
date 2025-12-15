@@ -1,5 +1,4 @@
-import { hover } from "@testing-library/user-event/dist/hover";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode } from "react";
 import { ArrowRight } from "react-feather";
 
 // ============================================================================
@@ -21,7 +20,6 @@ export const ButtonArrow = ({
   size = "md",
   className = "",
 }: ButtonArrowProps) => {
-  const CALC_TRANSLATE_CLASS = "translate-x-[calc(100%-42px)]";
   const baseStyles =
     "h-[42px] relative inline-flex items-center font-poppins font-semibold rounded-full transition-all duration-300 overflow-hidden";
 
@@ -30,13 +28,13 @@ export const ButtonArrow = ({
     secondary:
       "border border-white text-white hover:text-white",
     outline:
-      "bg-transparent border border-[#0094D9] text-[#0094D9] hover:text-white",
+      "border border-[#0094D9] text-[#0094D9] hover:text-white",
   };
 
   const gradientColor = {
     primary: "from-[#00539F] to-[#0094D9] shadow-[0_0_4px_0_#14559C]",
     secondary: "from-[#A11E1F] to-[#E83A3B] shadow-[0_0_4px_0_#14559C]",
-    outline: "from-[#0094D9] to-[#00539F]",
+    outline: "from-[#00539F] to-[#0094D9] border border-[#8AABE5] text-white",
   };
 
   return (
@@ -45,7 +43,7 @@ export const ButtonArrow = ({
       className={`${baseStyles} ${variantStyles[variant]} ${className} group`}>
       {/* Fondo deslizante con gradiente */}
       <div
-        className={`absolute w-[42px] h-[42px] left-0 p-[7px] border rounded-full bg-gradient-to-l ${gradientColor[variant]} group-hover:w-full transition-all duration-500 ease-out z-0`}>
+        className={`absolute w-[42px] h-[42px] left-0 p-[7px] border rounded-full bg-gradient-to-r ${gradientColor[variant]} group-hover:w-full transition-all duration-500 ease-in-out z-0`}>
         <div className="transition-all ease-in-out duration-500 group-hover:translate-x-full-minus-arrow">
           <ArrowRight />
         </div>

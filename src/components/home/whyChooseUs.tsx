@@ -140,7 +140,6 @@ export const WhyChooseUs = (): JSX.Element => {
         </div>
       </div>
 
-      {/* CTA Card - Mismo tamaño que las tarjetas de arriba */}
       <div className="rounded-2xl bg-gradient-to-b from-[#14559C] to-[#259DD7] shadow-2xl max-w-[1200px] mx-auto w-full px-6 sm:px-8 py-10 sm:py-12 md:py-14 flex flex-col space-y-6 items-center text-center justify-center min-h-[260px]">
         <p className="text-white text-center font-poppins text-lg sm:text-xl md:text-2xl font-semibold leading-snug">
           ¿Listo para Comenzar tu Proyecto?

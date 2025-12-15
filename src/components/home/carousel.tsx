@@ -1,6 +1,5 @@
 import { JSX, useState } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
-import { ButtonArrow } from "../button";
 
 export interface ServiceCard {
   id: string;
