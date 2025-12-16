@@ -1,5 +1,5 @@
 import { JSX, useState, useEffect } from "react";
-import logrosImg from "../../assets/aboutUs/img - logrosImpulsan.png";
+import logrosImg from "../../assets/aboutUs/imgLogrosImpulsan.png";
 import DynamicBackground from "../video";
 import slide1 from "../../assets/aboutUs/slide de numeros 1.mp4";
 import slide2 from "../../assets/aboutUs/slide de numeros 2.mp4";

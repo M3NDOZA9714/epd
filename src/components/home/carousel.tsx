@@ -130,7 +130,7 @@ const ServicesCarousel = ({ services }: ServicesCarouselProps): JSX.Element => {
               onClick={() => goToSlide(index)}
               className={`h-2 w-2 rounded-full transition-all duration-500 ease-in-out ${
                 index === currentIndex
-                  ? "bg-[#0094D9] scale-125 shadow-lg shadow-[#0094D9]/50 w-7"
+                  ? "bg-[#0094D9] shadow-lg shadow-[#0094D9]/50 w-7"
                   : "bg-gray-300 hover:bg-gray-400 hover:scale-110"
               }`}
               aria-label={`Ir a servicio ${index + 1}`}

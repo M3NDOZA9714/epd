@@ -4,10 +4,12 @@ import vision from "../../assets/aboutUs/icon vision.svg";
 
 export const MissionAboutUs = (): JSX.Element => {
   return (
-    <section className="flex flex-col h-full justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-16 space-y-8 md:space-y-12">
-      <div className="rounded-[32px] bg-[rgba(29,29,29,0.52)] shadow-[4px_5px_7.1px_rgba(0,0,0,0.25)] backdrop-blur-[6.5px] flex flex-col px-[100px] py-[54px] divide-y-2 divide-[rgba(37,157,215,0.41)]">
-        <div className="flex items-center gap-[47px] p-5">
-          <div className="flex flex-col gap-[24px]">
+    <section className="flex flex-col flex-1 h-full justify-center py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-16 space-y-6 sm:space-y-8 md:space-y-12">
+      {/* Main Container - Responsive */}
+      <div className="rounded-2xl md:rounded-[32px] bg-[rgba(29,29,29,0.52)] shadow-[4px_5px_7.1px_rgba(0,0,0,0.25)] backdrop-blur-[6.5px] flex flex-col md:flex-col px-4 sm:px-6 md:px-[100px] py-6 sm:py-8 md:py-[54px] divide-y-2 divide-[rgba(37,157,215,0.41)] space-y-6 sm:space-y-8 md:space-y-0">
+        {/* Misión */}
+        <div className="flex flex-col md:flex-row md:items-center md:gap-[47px] md:p-5 space-y-4 sm:space-y-6 md:space-y-0">
+          <div className="flex flex-col items-center gap-4 sm:gap-5 md:gap-[24px] flex-shrink-0">
             <svg
               width="59"
               height="59"
@@ -73,446 +75,80 @@ export const MissionAboutUs = (): JSX.Element => {
                 </filter>
               </defs>
             </svg>
-            <p className="text-white font-poppins text-4xl font-bold leading-[22px] text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)] flex-shrink-0 self-stretch">
+            <p className="text-white font-poppins text-2xl sm:text-3xl md:text-4xl font-bold leading-tight sm:leading-snug md:leading-relaxed text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)] flex-shrink-0">
               Misión
             </p>
           </div>
-          <p className="text-white font-poppins text-xl font-normal leading-[31px] text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)]">
+          <p className="text-white font-poppins text-base sm:text-lg md:text-xl font-normal leading-relaxed text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)]">
             Somos una empresa SIN LÍMITES formada para brindar soluciones
             integrales, especializadas e innovadoras al sector energético.
           </p>
         </div>
-        <div className="flex items-center gap-[47px] p-5">
-          <div className="flex flex-col gap-[24px]">
+
+        {/* Visión */}
+        <div className="flex flex-col md:flex-row md:items-center md:gap-[47px] md:p-5 space-y-4 sm:space-y-6 md:space-y-0 pt-6 sm:pt-8 md:pt-5">
+          <div className="flex flex-col items-center gap-4 sm:gap-5 md:gap-[24px] flex-shrink-0">
             <svg
-              width="53"
-              height="60"
-              viewBox="0 0 53 60"
+              width="59"
+              height="59"
+              viewBox="0 0 51 52"
               fill="none"
               xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_1_9563)" filter="url(#filter0_d_1_9563)">
-                <g filter="url(#filter1_d_1_9563)">
-                  <path
-                    d="M26.4121 18.3828C22.2928 18.3828 18.9414 21.7999 18.9414 26C18.9414 30.2001 22.2928 33.6172 26.4121 33.6172C30.5315 33.6172 33.8828 30.2001 33.8828 26C33.8828 21.7999 30.5315 18.3828 26.4121 18.3828ZM26.4121 30.5703C23.9405 30.5703 21.9297 28.5201 21.9297 26C21.9297 23.4799 23.9405 21.4297 26.4121 21.4297C28.8837 21.4297 30.8945 23.4799 30.8945 26C30.8945 28.5201 28.8837 30.5703 26.4121 30.5703Z"
-                    fill="#0094D9"
-                  />
-                </g>
-                <g filter="url(#filter2_d_1_9563)">
-                  <path
-                    d="M48.5062 25.0604C48.4061 24.9302 46.0101 21.8343 42.1291 18.7106C36.9098 14.5095 31.4751 12.2891 26.4121 12.2891C21.3492 12.2891 15.9143 14.5095 10.695 18.7106C6.81406 21.8343 4.41806 24.9302 4.31795 25.0604C3.89402 25.6122 3.89402 26.3878 4.31795 26.9396C4.41806 27.0698 6.81406 30.1657 10.695 33.2894C15.9143 37.4905 21.3492 39.7109 26.4121 39.7109C31.4751 39.7109 36.9099 37.4905 42.1291 33.2894C46.0102 30.1657 48.4062 27.0698 48.5062 26.9396C48.9302 26.3878 48.9302 25.6122 48.5062 25.0604ZM26.4121 36.6641C17.5588 36.6641 9.87177 28.761 7.45615 25.9988C9.86799 23.2347 17.5382 15.3359 26.4121 15.3359C35.2634 15.3359 42.9492 23.2357 45.367 26C42.9491 28.7643 35.2634 36.6641 26.4121 36.6641Z"
-                    fill="#0094D9"
-                  />
-                </g>
-                <g filter="url(#filter3_d_1_9563)">
-                  <path
-                    d="M26.4121 0C25.5869 0 24.918 0.682094 24.918 1.52344V7.71875C24.918 8.56009 25.5869 9.24219 26.4121 9.24219C27.2373 9.24219 27.9062 8.56009 27.9062 7.71875V1.52344C27.9062 0.682094 27.2373 0 26.4121 0Z"
-                    fill="#0094D9"
-                  />
-                </g>
-                <g filter="url(#filter4_d_1_9563)">
-                  <path
-                    d="M26.4121 42.7578C25.5869 42.7578 24.918 43.4399 24.918 44.2812V50.4766C24.918 51.3179 25.5869 52 26.4121 52C27.2373 52 27.9062 51.3179 27.9062 50.4766V44.2812C27.9062 43.4399 27.2373 42.7578 26.4121 42.7578Z"
-                    fill="#0094D9"
-                  />
-                </g>
-                <g filter="url(#filter5_d_1_9563)">
-                  <path
-                    d="M12.6772 9.84111L8.45104 5.53211C7.86763 4.93716 6.92154 4.93726 6.33802 5.53211C5.75451 6.12707 5.75451 7.09161 6.33802 7.68656L10.5642 11.9956C11.1476 12.5905 12.0937 12.5905 12.6772 11.9956C13.2607 11.4006 13.2607 10.4361 12.6772 9.84111Z"
-                    fill="#0094D9"
-                  />
-                </g>
-                <g filter="url(#filter6_d_1_9563)">
-                  <path
-                    d="M46.4858 44.3128L42.2596 40.0038C41.6761 39.4089 40.73 39.4089 40.1466 40.0038C39.5631 40.5988 39.5631 41.5633 40.1466 42.1583L44.3727 46.4673C44.9562 47.0622 45.9022 47.0622 46.4858 46.4673C47.0693 45.8723 47.0693 44.9078 46.4858 44.3128Z"
-                    fill="#0094D9"
-                  />
-                </g>
-                <g filter="url(#filter7_d_1_9563)">
-                  <path
-                    d="M12.6772 40.0038C12.0938 39.4089 11.1477 39.4089 10.5642 40.0038L6.33802 44.3128C5.75451 44.9078 5.75451 45.8723 6.33802 46.4673C6.92164 47.0623 7.86773 47.062 8.45104 46.4673L12.6772 42.1583C13.2607 41.5633 13.2607 40.5988 12.6772 40.0038Z"
-                    fill="#0094D9"
-                  />
-                </g>
-                <g filter="url(#filter8_d_1_9563)">
-                  <path
-                    d="M46.4858 5.53211C45.9024 4.93726 44.9564 4.93716 44.3727 5.53211L40.1466 9.84111C39.5631 10.4361 39.5631 11.4006 40.1466 11.9956C40.73 12.5905 41.6761 12.5905 42.2596 11.9956L46.4858 7.68656C47.0693 7.09161 47.0693 6.12707 46.4858 5.53211Z"
-                    fill="#0094D9"
-                  />
-                </g>
-                <g filter="url(#filter9_d_1_9563)">
-                  <path
-                    d="M26.4121 27.5234C27.2373 27.5234 27.9062 26.8414 27.9062 26C27.9062 25.1586 27.2373 24.4766 26.4121 24.4766C25.5869 24.4766 24.918 25.1586 24.918 26C24.918 26.8414 25.5869 27.5234 26.4121 27.5234Z"
-                    fill="#0094D9"
-                  />
-                </g>
-              </g>
-              <defs>
-                <filter
-                  id="filter0_d_1_9563"
-                  x="-3.08789"
-                  y="0"
-                  width="59"
-                  height="60"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <filter
-                  id="filter1_d_1_9563"
-                  x="16.9414"
-                  y="18.3828"
-                  width="22.9414"
-                  height="23.2344"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <filter
-                  id="filter2_d_1_9563"
-                  x="2"
-                  y="12.2891"
-                  width="52.8242"
-                  height="35.4219"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <filter
-                  id="filter3_d_1_9563"
-                  x="22.918"
-                  y="0"
-                  width="10.9883"
-                  height="17.2422"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <filter
-                  id="filter4_d_1_9563"
-                  x="22.918"
-                  y="42.7578"
-                  width="10.9883"
-                  height="17.2422"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <filter
-                  id="filter5_d_1_9563"
-                  x="3.90039"
-                  y="5.08594"
-                  width="15.2148"
-                  height="15.3555"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <filter
-                  id="filter6_d_1_9563"
-                  x="37.709"
-                  y="39.5576"
-                  width="15.2148"
-                  height="15.3555"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <filter
-                  id="filter7_d_1_9563"
-                  x="3.90039"
-                  y="39.5576"
-                  width="15.2148"
-                  height="15.3555"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <filter
-                  id="filter8_d_1_9563"
-                  x="37.709"
-                  y="5.08594"
-                  width="15.2148"
-                  height="15.3555"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <filter
-                  id="filter9_d_1_9563"
-                  x="22.918"
-                  y="24.4766"
-                  width="10.9883"
-                  height="11.0469"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="4" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1_9563"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1_9563"
-                    result="shape"
-                  />
-                </filter>
-                <clipPath id="clip0_1_9563">
-                  <rect
-                    width="51"
-                    height="52"
-                    fill="white"
-                    transform="translate(0.912109)"
-                  />
-                </clipPath>
-              </defs>
+              <path
+                d="M25.5 18.3828C21.3807 18.3828 18.0293 21.7999 18.0293 26C18.0293 30.2001 21.3807 33.6172 25.5 33.6172C29.6193 33.6172 32.9707 30.2001 32.9707 26C32.9707 21.7999 29.6193 18.3828 25.5 18.3828ZM25.5 30.5703C23.0284 30.5703 21.0176 28.5201 21.0176 26C21.0176 23.4799 23.0284 21.4297 25.5 21.4297C27.9716 21.4297 29.9824 23.4799 29.9824 26C29.9824 28.5201 27.9716 30.5703 25.5 30.5703Z"
+                fill="#0094D9"
+              />
+              <path
+                d="M47.5941 25.0604C47.4939 24.9302 45.0979 21.8343 41.217 18.7106C35.9977 14.5095 30.5629 12.2891 25.5 12.2891C20.4371 12.2891 15.0022 14.5095 9.78294 18.7106C5.90195 21.8343 3.50595 24.9302 3.40584 25.0604C2.98191 25.6122 2.98191 26.3878 3.40584 26.9396C3.50595 27.0698 5.90195 30.1657 9.78294 33.2894C15.0022 37.4905 20.4371 39.7109 25.5 39.7109C30.5629 39.7109 35.9978 37.4905 41.217 33.2894C45.098 30.1657 47.494 27.0698 47.5941 26.9396C48.0181 26.3878 48.0181 25.6122 47.5941 25.0604ZM25.5 36.6641C16.6467 36.6641 8.95966 28.761 6.54404 25.9988C8.95588 23.2347 16.6261 15.3359 25.5 15.3359C34.3513 15.3359 42.037 23.2357 44.4549 26C42.0369 28.7643 34.3513 36.6641 25.5 36.6641Z"
+                fill="#0094D9"
+              />
+              <path
+                d="M25.5 0C24.6748 0 24.0059 0.682094 24.0059 1.52344V7.71875C24.0059 8.56009 24.6748 9.24219 25.5 9.24219C26.3252 9.24219 26.9941 8.56009 26.9941 7.71875V1.52344C26.9941 0.682094 26.3252 0 25.5 0Z"
+                fill="#0094D9"
+              />
+              <path
+                d="M25.5 42.7578C24.6748 42.7578 24.0059 43.4399 24.0059 44.2812V50.4766C24.0059 51.3179 24.6748 52 25.5 52C26.3252 52 26.9941 51.3179 26.9941 50.4766V44.2812C26.9941 43.4399 26.3252 42.7578 25.5 42.7578Z"
+                fill="#0094D9"
+              />
+              <path
+                d="M11.7651 9.84111L7.53893 5.53211C6.95552 4.93716 6.00943 4.93726 5.42592 5.53211C4.8424 6.12707 4.8424 7.09161 5.42592 7.68656L9.65204 11.9956C10.2355 12.5905 11.1815 12.5905 11.7651 11.9956C12.3486 11.4006 12.3486 10.4361 11.7651 9.84111Z"
+                fill="#0094D9"
+              />
+              <path
+                d="M45.5737 44.3128L41.3475 40.0038C40.764 39.4089 39.8179 39.4089 39.2345 40.0038C38.651 40.5988 38.651 41.5633 39.2345 42.1583L43.4606 46.4673C44.044 47.0622 44.9901 47.0622 45.5737 46.4673C46.1572 45.8723 46.1572 44.9078 45.5737 44.3128Z"
+                fill="#0094D9"
+              />
+              <path
+                d="M11.7651 40.0038C11.1816 39.4089 10.2356 39.4089 9.65204 40.0038L5.42592 44.3128C4.8424 44.9078 4.8424 45.8723 5.42592 46.4673C6.00953 47.0623 6.95562 47.062 7.53893 46.4673L11.7651 42.1583C12.3486 41.5633 12.3486 40.5988 11.7651 40.0038Z"
+                fill="#0094D9"
+              />
+              <path
+                d="M45.5736 5.53211C44.9903 4.93726 44.0442 4.93716 43.4606 5.53211L39.2345 9.84111C38.651 10.4361 38.651 11.4006 39.2345 11.9956C39.8179 12.5905 40.764 12.5905 41.3475 11.9956L45.5736 7.68656C46.1572 7.09161 46.1572 6.12707 45.5736 5.53211Z"
+                fill="#0094D9"
+              />
+              <path
+                d="M25.5 27.5234C26.3252 27.5234 26.9941 26.8414 26.9941 26C26.9941 25.1586 26.3252 24.4766 25.5 24.4766C24.6748 24.4766 24.0059 25.1586 24.0059 26C24.0059 26.8414 24.6748 27.5234 25.5 27.5234Z"
+                fill="#0094D9"
+              />
             </svg>
 
-            <p className="text-white font-poppins text-4xl font-bold leading-[22px] text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)] flex-shrink-0 self-stretch">
+            <p className="text-white font-poppins text-2xl sm:text-3xl md:text-4xl font-bold leading-tight sm:leading-snug md:leading-relaxed text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)] flex-shrink-0">
               Visión
             </p>
           </div>
-          <p className="text-white font-poppins text-xl font-normal leading-[31px] text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)]">
+          <p className="text-white font-poppins text-base sm:text-lg md:text-xl font-normal leading-relaxed text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)]">
             Trascender fronteras con personas que disfruten hacer grandes cosas.
           </p>
         </div>
-        <div className="flex items-center gap-[47px] p-5">
-          <div className="flex flex-col gap-[24px]">
+
+        {/* Valores */}
+        <div className="flex flex-col md:flex-row md:items-start md:gap-[47px] md:p-5 space-y-4 sm:space-y-6 md:space-y-0 pt-6 sm:pt-8 md:pt-5">
+          <div className="flex flex-col items-center gap-4 sm:gap-5 md:gap-[24px] flex-shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="59"
-              height="60"
-              viewBox="0 0 59 60"
+              height="59"
+              viewBox="0 0 59 59"
               fill="none">
               <defs>
                 <filter
@@ -620,48 +256,61 @@ export const MissionAboutUs = (): JSX.Element => {
               </g>
             </svg>
 
-            <p className="text-white font-poppins text-4xl font-bold leading-[22px] text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)] flex-shrink-0 self-stretch">
+            <p className="text-white font-poppins text-2xl sm:text-3xl md:text-4xl font-bold leading-tight sm:leading-snug md:leading-relaxed text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)] flex-shrink-0">
               Valores
             </p>
           </div>
-          <p className="text-[#0094D9] font-poppins text-xl font-semibold leading-[31px] text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)]">
-            <ul className="list-disc list-outside ml-6">
+          <div className="text-[#0094D9] font-poppins text-sm sm:text-base md:text-xl font-semibold leading-relaxed text-shadow-[2px_4px_4px_rgba(0,0,0,0.25)]">
+            <ul className="list-disc list-outside ml-4 sm:ml-5 md:ml-6 space-y-2 sm:space-y-3">
               <li>
-                Responsabilidad:{" "}
-                <span className="text-white font-poppins text-xl font-normal leading-[31px]">
+                <span className="text-[#0094D9] font-semibold">
+                  Responsabilidad:
+                </span>
+                <span className="text-white font-poppins text-sm sm:text-base md:text-xl font-normal">
+                  {" "}
                   Nos hacemos cargo de nuestras decisiones, de los resultados
                   que obtiene el equipo y la gente que lideramos.
                 </span>
               </li>
               <li>
-                Sentido de Superación:{" "}
-                <span className="text-white font-poppins text-xl font-normal leading-[31px]">
+                <span className="text-[#0094D9] font-semibold">
+                  Sentido de Superación:
+                </span>
+                <span className="text-white font-poppins text-sm sm:text-base md:text-xl font-normal">
+                  {" "}
                   Nos unimos en la meta corporativa de la mejora continua bajo
                   autodisciplina y constancia para el logro de metas.
                 </span>
               </li>
               <li>
-                Voluntad Comunicacional:{" "}
-                <span className="text-white font-poppins text-xl font-normal leading-[31px]">
+                <span className="text-[#0094D9] font-semibold">
+                  Voluntad Comunicacional:
+                </span>
+                <span className="text-white font-poppins text-sm sm:text-base md:text-xl font-normal">
+                  {" "}
                   Nos esforzamos por establecer una comunicación fluida y
                   permanente con nuestro equipo y el resto de los stakeholders.
                 </span>
               </li>
               <li>
-                Pasión:{" "}
-                <span className="text-white font-poppins text-xl font-normal leading-[31px]">
+                <span className="text-[#0094D9] font-semibold">Pasión:</span>
+                <span className="text-white font-poppins text-sm sm:text-base md:text-xl font-normal">
+                  {" "}
                   Disfrutamos lo que hacemos.
                 </span>
               </li>
               <li>
-                Credibilidad:{" "}
-                <span className="text-white font-poppins text-xl font-normal leading-[31px]">
+                <span className="text-[#0094D9] font-semibold">
+                  Credibilidad:
+                </span>
+                <span className="text-white font-poppins text-sm sm:text-base md:text-xl font-normal">
+                  {" "}
                   Nuestras experiencias, nuestra trayectoria y nuestro trabajo
                   demuestra quienes somos.
                 </span>
               </li>
             </ul>
-          </p>
+          </div>
         </div>
       </div>
     </section>

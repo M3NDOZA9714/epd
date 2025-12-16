@@ -13,37 +13,42 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   mediaType,
   mediaSource,
   gradient,
+  minHeight = "min-h-screen",
 }) => {
   const renderBackground = () => {
     if (mediaType === "video") {
       return (
         <video
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           loop
           muted
           playsInline>
           <source src={mediaSource} type="video/mp4" />
-          Tu navegador no soporta el formato de video.
         </video>
       );
     }
 
     return (
-      <img
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        src={mediaSource}
-        alt="Fondo Dinámico"
+      <div
+        className="absolute inset-0 w-full h-full bg-center bg-no-repeat bg-cover"
+        style={{ backgroundImage: `url(${mediaSource})` }}
       />
     );
   };
 
   return (
-    <div className={`relative w-screen h-full min-h-screen`}>
-      {renderBackground()}
+    <div className={`relative w-full ${minHeight} flex flex-col`}>
+      {/* Capa 1: Fondo (video/imagen) */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        {renderBackground()}
+      </div>
 
-      <div className={`z-10 absolute inset-0 h-full ${gradient}`}></div>
-      <div className="relative z-20 w-full h-full min-h-screen">{children}</div>
+      {/* Capa 2: Overlay con gradiente */}
+      <div className={`absolute inset-0 w-full h-full ${gradient}`} />
+
+      {/* Capa 3: Contenido */}
+      <div className="relative w-full flex-1 flex flex-col">{children}</div>
     </div>
   );
 };

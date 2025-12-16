@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import DynamicBackground from "../components/video";
 import { HeroAboutUs } from "../components/aboutUs/heroAboutUs";
-import bg from "../assets/aboutUs/Header - Background.png";
+import bg from "../assets/aboutUs/HeaderBackground.png";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 import { AboutUs } from "../components/aboutUs/aboutUs";
@@ -9,6 +9,7 @@ import { MissionAboutUs } from "../components/aboutUs/mission";
 import mission from "../assets/aboutUs/video mision - vision- valores.mp4";
 import { CommitmentAboutUs } from "../components/aboutUs/commitment";
 import { AchievmentsAboutUs } from "../components/aboutUs/achievements";
+import { StatsSection } from "./animations";
 
 export const AboutUsPage = (): JSX.Element => {
   return (
