@@ -28,10 +28,11 @@ export const Navbar = (): JSX.Element => {
   }, [mobileMenuOpen]);
 
   const menuList = {
-    epc: [
-      { name: "USED", url: "/epc/used" },
-      { name: "UPM", url: "/epc/upm" },
-      { name: "UAT", url: "/epc/uat" },
+    services: [
+      { name: "UDE", url: "/servicios/ude" },
+      { name: "USE", url: "/servicios/use" },
+      { name: "UPM", url: "/servicios/upm" },
+      { name: "UAT", url: "/servicios/uat" },
     ],
     contact: [
       { name: "Contáctanos", url: "/contacto" },
@@ -91,27 +92,27 @@ export const Navbar = (): JSX.Element => {
         </li>
         <li>
           <Link
-            to="/proyectos"
+            to="/epcs"
             className={`text-white font-semibold font-poppins text-sm lg:text-base xl:text-lg hover:opacity-80 transition ${
               isActive("/proyectos") ? "border-b-2 border-white" : ""
             }`}>
-            Proyecto
+            EPCs
           </Link>
         </li>
 
-        {/* EPCs Dropdown Desktop */}
+        {/* services Dropdown Desktop */}
         <li
           className="relative group"
-          onMouseEnter={() => setDesktopDropdown("epc")}
+          onMouseEnter={() => setDesktopDropdown("services")}
           onMouseLeave={() => setDesktopDropdown("")}>
           <div className="flex gap-2 text-white font-semibold font-poppins text-sm lg:text-base xl:text-lg cursor-pointer hover:opacity-80 transition items-center py-2">
-            EPCs
+            Servicios
             <img src={vector1} alt="Vector Icon" className="w-4 h-4" />
           </div>
-          {desktopDropdown === "epc" && (
+          {desktopDropdown === "services" && (
             <div className="absolute w-64 right-0 mt-1 rounded-2xl bg-white p-4 shadow-2xl z-50 before:content-[''] before:absolute before:bottom-full before:right-8 before:border-8 before:border-transparent before:border-b-white animate-in fade-in duration-200">
               <ul className="space-y-2">
-                {menuList.epc.map((item) => (
+                {menuList.services.map((item) => (
                   <li key={item.name}>
                     <Link
                       to={item.url}
@@ -133,16 +134,6 @@ export const Navbar = (): JSX.Element => {
               </ul>
             </div>
           )}
-        </li>
-
-        <li>
-          <Link
-            to="/servicios"
-            className={`text-white font-semibold font-poppins text-sm lg:text-base xl:text-lg hover:opacity-80 transition ${
-              isActive("/servicios") ? "border-b-2 border-white" : ""
-            }`}>
-            Servicios
-          </Link>
         </li>
         <li>
           <Link
@@ -249,27 +240,27 @@ export const Navbar = (): JSX.Element => {
               Nosotros
             </Link>
             <Link
-              to="/proyectos"
+              to="/epcs"
               onClick={() => setMobileMenuOpen(false)}
               className={`text-white font-semibold font-poppins py-3 px-4 border-b border-white/20 transition ${
                 isActive("/proyectos") ? "text-yellow-300" : ""
               }`}>
-              Proyecto
+              EPCs
             </Link>
 
             {/* EPCs Accordion */}
             <div>
               <button
                 onClick={() =>
-                  setOpenDropdown(openDropdown === "epc" ? "" : "epc")
+                  setOpenDropdown(openDropdown === "services" ? "" : "services")
                 }
                 className="w-full flex justify-between items-center text-white font-semibold font-poppins py-3 px-4 border-b border-white/20 hover:bg-white/10 transition">
-                EPCs
-                {renderArrow(openDropdown === "epc")}
+                Servicios
+                {renderArrow(openDropdown === "services")}
               </button>
-              {openDropdown === "epc" && (
+              {openDropdown === "services" && (
                 <div className="bg-white/10 space-y-1">
-                  {menuList.epc.map((item) => (
+                  {menuList.services.map((item) => (
                     <Link
                       key={item.name}
                       to={item.url}
@@ -282,14 +273,6 @@ export const Navbar = (): JSX.Element => {
               )}
             </div>
 
-            <Link
-              to="/servicios"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`text-white font-semibold font-poppins py-3 px-4 border-b border-white/20 transition ${
-                isActive("/servicios") ? "text-yellow-300" : ""
-              }`}>
-              Servicios
-            </Link>
             <Link
               to="/suministros"
               onClick={() => setMobileMenuOpen(false)}
