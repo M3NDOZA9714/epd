@@ -8,7 +8,7 @@ import { ArrowRight } from "react-feather";
 interface ButtonArrowProps {
   children: ReactNode;
   onClick?: () => void;
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "tertiary";
   size?: "sm" | "md" | "lg";
   className?: string;
 }
@@ -25,25 +25,28 @@ export const ButtonArrow = ({
 
   const variantStyles = {
     primary: "border border-white text-white hover:text-white",
-    secondary:
-      "border border-white text-white hover:text-white",
-    outline:
-      "border border-[#0094D9] text-[#0094D9] hover:text-white",
+    secondary: "border border-white text-white hover:text-white",
+    outline: "border border-[#0094D9] text-[#0094D9] hover:text-white",
+    tertiary: "border border-[#A11E1F] text-[#A11E1F] hover:text-white",
   };
 
   const gradientColor = {
     primary: "from-[#00539F] to-[#0094D9] shadow-[0_0_4px_0_#14559C]",
     secondary: "from-[#A11E1F] to-[#E83A3B] shadow-[0_0_4px_0_#14559C]",
     outline: "from-[#00539F] to-[#0094D9] border border-[#8AABE5] text-white",
+    tertiary:
+      "bg-gradient-to-l from-[#E83A3B] to-[#A11E1F] shadow-[0_0_4px_0_#A11E1F] border border-white text-white",
   };
 
   return (
     <button
       onClick={onClick}
-      className={`${baseStyles} ${variantStyles[variant]} ${className} group`}>
+      className={`${baseStyles} ${variantStyles[variant]} ${className} group`}
+    >
       {/* Fondo deslizante con gradiente */}
       <div
-        className={`absolute w-[42px] h-[42px] left-0 p-[7px] border rounded-full bg-gradient-to-r ${gradientColor[variant]} group-hover:w-full transition-all duration-500 ease-in-out z-0`}>
+        className={`absolute w-[42px] h-[42px] left-0 p-[7px] border rounded-full bg-gradient-to-r ${gradientColor[variant]} group-hover:w-full transition-all duration-500 ease-in-out z-0`}
+      >
         <div className="transition-all ease-in-out duration-500 group-hover:translate-x-full-minus-arrow">
           <ArrowRight />
         </div>

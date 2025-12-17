@@ -1,6 +1,4 @@
 import { JSX } from "react";
-import { ButtonArrow } from "../button";
-import vision from "../../assets/aboutUs/icon vision.svg";
 
 export const MissionAboutUs = (): JSX.Element => {
   return (

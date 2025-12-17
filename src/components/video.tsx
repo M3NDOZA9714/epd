@@ -6,6 +6,7 @@ interface DynamicBackgroundProps {
   mediaSource: string;
   gradient: string;
   minHeight?: string;
+  maxHeight?: string;
 }
 
 const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
@@ -14,6 +15,7 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   mediaSource,
   gradient,
   minHeight = "min-h-screen",
+  maxHeight,
 }) => {
   const renderBackground = () => {
     if (mediaType === "video") {
@@ -23,7 +25,8 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
           autoPlay
           loop
           muted
-          playsInline>
+          playsInline
+        >
           <source src={mediaSource} type="video/mp4" />
         </video>
       );
@@ -38,7 +41,11 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   };
 
   return (
-    <div className={`relative w-full ${minHeight} flex flex-col`}>
+    <div
+      className={`relative w-full ${
+        maxHeight?.length ? maxHeight : minHeight
+      } flex flex-col`}
+    >
       {/* Capa 1: Fondo (video/imagen) */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         {renderBackground()}

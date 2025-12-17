@@ -29,10 +29,10 @@ export const Navbar = (): JSX.Element => {
 
   const menuList = {
     services: [
-      { name: "UDE", url: "/servicios/ude" },
-      { name: "USE", url: "/servicios/use" },
-      { name: "UPM", url: "/servicios/upm" },
-      { name: "UAT", url: "/servicios/uat" },
+      { name: "UDE", url: "/ude" },
+      { name: "USE", url: "/use" },
+      { name: "UPM", url: "/upm" },
+      { name: "UAT", url: "/uat" },
     ],
     contact: [
       { name: "Contáctanos", url: "/contacto" },
