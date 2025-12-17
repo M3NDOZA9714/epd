@@ -94,7 +94,7 @@ export const Navbar = (): JSX.Element => {
           <Link
             to="/epcs"
             className={`text-white font-semibold font-poppins text-sm lg:text-base xl:text-lg hover:opacity-80 transition ${
-              isActive("/proyectos") ? "border-b-2 border-white" : ""
+              isActive("/epcs") ? "border-b-2 border-white" : ""
             }`}>
             EPCs
           </Link>
@@ -243,7 +243,7 @@ export const Navbar = (): JSX.Element => {
               to="/epcs"
               onClick={() => setMobileMenuOpen(false)}
               className={`text-white font-semibold font-poppins py-3 px-4 border-b border-white/20 transition ${
-                isActive("/proyectos") ? "text-yellow-300" : ""
+                isActive("/epcs") ? "text-yellow-300" : ""
               }`}>
               EPCs
             </Link>
