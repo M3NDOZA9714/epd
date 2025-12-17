@@ -60,7 +60,7 @@ export const DiagnosticUde = (): JSX.Element => {
               ].map((item, idx) => (
                 <li
                   key={idx}
-                  className="flex gap-[12px] text-white font-poppins text-base font-normal leading-6"
+                  className="flex items-start gap-[12px] text-white font-poppins text-base font-normal leading-6"
                 >
                   <div className="rounded-full bg-white p-1">
                     <svg
