@@ -1,11 +1,11 @@
 import { JSX, useState, useEffect } from "react";
-import sliderImg1 from "../../assets/aboutUs/slider - img1.png";
-import sliderImg2 from "../../assets/aboutUs/slider - img2.png";
-import sliderImg3 from "../../assets/aboutUs/slider - img3.jpg";
-import sliderImg4 from "../../assets/aboutUs/slider - img4.jpg";
-import sliderImg5 from "../../assets/aboutUs/slider - img5.png";
-import sliderImg6 from "../../assets/aboutUs/slider - img6.jpg";
-import sliderImg7 from "../../assets/aboutUs/slider - img7.png";
+import sliderImg1 from "../../assets/aboutUs/sliderImg1.png";
+import sliderImg2 from "../../assets/aboutUs/sliderImg2.png";
+import sliderImg3 from "../../assets/aboutUs/sliderImg3.jpg";
+import sliderImg4 from "../../assets/aboutUs/sliderImg4.jpg";
+import sliderImg5 from "../../assets/aboutUs/sliderImg5.png";
+import sliderImg6 from "../../assets/aboutUs/sliderImg6.jpg";
+import sliderImg7 from "../../assets/aboutUs/sliderImg7.png";
 
 const sliderImages = [
   sliderImg1,

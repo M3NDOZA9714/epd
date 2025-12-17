@@ -1,8 +1,8 @@
 import { JSX } from "react";
 import logo from "../assets/home/Logo_EnergiaPD_blanco.png";
-import iaf from "../assets/home/Logo - IAF.svg";
-import jhuez from "../assets/home/Logo - Jhuez International Group.svg";
-import assurance from "../assets/home/Logo - Assurance Quality.svg";
+import iaf from "../assets/home/IAF.svg";
+import jhuez from "../assets/home/JhuezInternationalGroup.svg";
+import assurance from "../assets/home/AssuranceQuality.svg";
 
 export const Footer = (): JSX.Element => {
   return (

@@ -6,7 +6,7 @@ import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 import { AboutUs } from "../components/aboutUs/aboutUs";
 import { MissionAboutUs } from "../components/aboutUs/mission";
-import mission from "../assets/aboutUs/video mision - vision- valores.mp4";
+import mission from "../assets/aboutUs/videoMision-vision-valores.mp4";
 import { CommitmentAboutUs } from "../components/aboutUs/commitment";
 import { AchievmentsAboutUs } from "../components/aboutUs/achievements";
 import { StatsSection } from "./animations";

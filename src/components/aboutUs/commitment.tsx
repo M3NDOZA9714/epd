@@ -1,10 +1,10 @@
 import { JSX, useState, useEffect } from "react";
-import sliderImg1 from "../../assets/aboutUs/slider nuestroCompromiso_img1.png";
-import sliderImg2 from "../../assets/aboutUs/slider nuestroCompromiso_img2.jpg";
-import sliderImg3 from "../../assets/aboutUs/slider nuestroCompromiso_img3.png";
-import sliderImg4 from "../../assets/aboutUs/slider nuestroCompromiso_img4.jpg";
-import sliderImg5 from "../../assets/aboutUs/slider nuestroCompromiso_img5.jpg";
-import sliderImg6 from "../../assets/aboutUs/slider nuestroCompromiso_img6.jpg";
+import sliderImg1 from "../../assets/aboutUs/sliderNuestroCompromiso_img1.png";
+import sliderImg2 from "../../assets/aboutUs/sliderNuestroCompromiso_img2.jpg";
+import sliderImg3 from "../../assets/aboutUs/sliderNuestroCompromiso_img3.png";
+import sliderImg4 from "../../assets/aboutUs/sliderNuestroCompromiso_img4.jpg";
+import sliderImg5 from "../../assets/aboutUs/sliderNuestroCompromiso_img5.jpg";
+import sliderImg6 from "../../assets/aboutUs/sliderNuestroCompromiso_img6.jpg";
 
 const commitmentSliderImages = [
   sliderImg1,
