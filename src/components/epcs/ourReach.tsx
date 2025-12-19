@@ -10,7 +10,7 @@ import energiaSolar from "../../assets/home/EnergiaSolar.jpg";
 
 export const OurReachEpc = (): JSX.Element => {
   return (
-    <section className="w-full h-full flex flex-col flex-1 justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 space-y-8 md:space-y-12 py-12 sm:py-16 md:py-20 lg:py-24">
+    <section className="w-full h-full flex flex-col flex-1 justify-center items-center space-y-8 md:space-y-12 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="px-4 py-2 w-fit rounded-full border border-white/15 bg-[#A11E1F] shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px] text-white font-poppins text-sm sm:text-base font-semibold leading-snug tracking-tight">
         Nuestro Alcance
       </div>

@@ -11,7 +11,7 @@ export const ContactusUd = (): JSX.Element => {
         Contáctanos y descubre cómo un buen diagnóstico puede proteger tus
         equipos
       </div>
-      <ButtonArrow variant="secondary">Solicite una Contización</ButtonArrow>;
+      <ButtonArrow variant="secondary">Solicite una Cotización</ButtonArrow>;
     </section>
   );
 };

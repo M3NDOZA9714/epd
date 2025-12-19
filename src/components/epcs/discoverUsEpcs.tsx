@@ -1,5 +1,9 @@
 import { JSX, useEffect, useRef, useState } from "react";
-import slide1 from "../../assets/epcs/slide1.jpg";
+import slide1 from "../../assets/epcs/slide1.png";
+import slide2 from "../../assets/epcs/slide2.png";
+import slide3 from "../../assets/epcs/slide3.png";
+import slide4 from "../../assets/epcs/slide4.png";
+import slide5 from "../../assets/epcs/slide5.png";
 import { ChevronLeft, ChevronRight } from "react-feather";
 
 export interface ProjectCard {
@@ -14,17 +18,38 @@ export const DiscoverUsEpcs = (): JSX.Element => {
   const projects: ProjectCard[] = [
     {
       id: "1",
-      title: "Línea de Transmisión",
+      title: "Planta Térmica El Faro",
       image: slide1,
-      location: "En CA-5",
-      capacity: "230kV",
+      location: "Cortés",
+      capacity: "40MW",
     },
     {
       id: "2",
-      title: "Línea de Transmisión",
-      image: slide1,
-      location: "En CA-5",
+      title: "Subestación Eléctrica",
+      image: slide2,
+      location: "San Pedro Sula Sur",
       capacity: "230kV",
+    },
+    {
+      id: "3",
+      title: "Plantas de Generación Diesel",
+      image: slide3,
+      location: "Distribuidas a Nivel Nacional",
+      capacity: "250MW",
+    },
+    {
+      id: "4",
+      title: "Líneas de Transmisión",
+      image: slide4,
+      location: "DEn CA-5",
+      capacity: "230kV",
+    },
+    {
+      id: "5",
+      title: "Planta Térmica La Ensenada",
+      image: slide5,
+      location: "La Ceiba",
+      capacity: "40MW",
     },
   ];
 
@@ -122,21 +147,18 @@ export const DiscoverUsEpcs = (): JSX.Element => {
           {/* Viewport */}
           <div
             ref={containerRef}
-            className="overflow-hidden rounded-2xl md:rounded-3xl"
-          >
+            className="overflow-hidden rounded-2xl md:rounded-3xl">
             {/* Track */}
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
                 transform: `translateX(-${currentIndex * slideWidth}px)`,
-              }}
-            >
+              }}>
               {projects.map((project) => (
                 <div
                   key={"proj" + project.id}
                   className="relative flex-shrink-0 overflow-hidden h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px]"
-                  style={{ width: `${slideWidth}px` }}
-                >
+                  style={{ width: `${slideWidth}px` }}>
                   <img
                     src={project.image}
                     alt={project.title}
@@ -163,8 +185,7 @@ export const DiscoverUsEpcs = (): JSX.Element => {
                           viewBox="0 0 20 20"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          className="flex-shrink-0"
-                        >
+                          className="flex-shrink-0">
                           <path
                             d="M8.33398 10H11.6673"
                             stroke="white"
@@ -213,8 +234,7 @@ export const DiscoverUsEpcs = (): JSX.Element => {
                           viewBox="0 0 20 20"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          className="flex-shrink-0"
-                        >
+                          className="flex-shrink-0">
                           <path
                             d="M3.33422 11.6662C3.17653 11.6668 3.02191 11.6226 2.88835 11.5387C2.75479 11.4549 2.64775 11.3349 2.57968 11.1926C2.51161 11.0504 2.4853 10.8917 2.5038 10.7351C2.52231 10.5785 2.58487 10.4304 2.68422 10.3079L10.9342 1.8079C10.9961 1.73647 11.0804 1.6882 11.1734 1.67101C11.2663 1.65382 11.3623 1.66874 11.4457 1.71332C11.529 1.7579 11.5947 1.82948 11.632 1.91632C11.6693 2.00317 11.676 2.10011 11.6509 2.19123L10.0509 7.2079C10.0037 7.33417 9.98786 7.47 10.0047 7.60374C10.0216 7.73748 10.0706 7.86513 10.1476 7.97575C10.2247 8.08638 10.3274 8.17666 10.447 8.23887C10.5665 8.30107 10.6994 8.33334 10.8342 8.3329H16.6676C16.8253 8.33236 16.9799 8.37658 17.1134 8.46042C17.247 8.54425 17.354 8.66427 17.4221 8.80652C17.4902 8.94877 17.5165 9.10741 17.498 9.26402C17.4795 9.42062 17.4169 9.56877 17.3176 9.69123L9.06756 18.1912C9.00567 18.2627 8.92134 18.3109 8.8284 18.3281C8.73547 18.3453 8.63945 18.3304 8.55611 18.2858C8.47278 18.2412 8.40707 18.1697 8.36978 18.0828C8.33248 17.996 8.32582 17.899 8.35089 17.8079L9.95089 12.7912C9.99807 12.665 10.0139 12.5291 9.99706 12.3954C9.98021 12.2617 9.93117 12.134 9.85415 12.0234C9.77712 11.9128 9.67441 11.8225 9.55483 11.7603C9.43524 11.6981 9.30235 11.6658 9.16756 11.6662H3.33422Z"
                             stroke="white"
@@ -238,16 +258,14 @@ export const DiscoverUsEpcs = (): JSX.Element => {
             <button
               onClick={goToPrevious}
               className="pointer-events-auto p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 transition hover:scale-110 duration-300"
-              aria-label="Anterior servicio"
-            >
+              aria-label="Anterior servicio">
               <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
             </button>
 
             <button
               onClick={goToNext}
               className="pointer-events-auto p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 transition hover:scale-110 duration-300"
-              aria-label="Siguiente servicio"
-            >
+              aria-label="Siguiente servicio">
               <ChevronRight size={20} className="sm:w-6 sm:h-6" />
             </button>
           </div>
@@ -257,8 +275,7 @@ export const DiscoverUsEpcs = (): JSX.Element => {
             <button
               onClick={goToPrevious}
               className="flex lg:hidden pointer-events-auto p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 transition hover:scale-110 duration-300"
-              aria-label="Anterior servicio"
-            >
+              aria-label="Anterior servicio">
               <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
             </button>
             {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
@@ -276,8 +293,7 @@ export const DiscoverUsEpcs = (): JSX.Element => {
             <button
               onClick={goToNext}
               className="flex lg:hidden pointer-events-auto p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 transition hover:scale-110 duration-300"
-              aria-label="Siguiente servicio"
-            >
+              aria-label="Siguiente servicio">
               <ChevronRight size={20} className="sm:w-6 sm:h-6" />
             </button>
           </div>
