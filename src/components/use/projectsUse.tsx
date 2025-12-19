@@ -1,5 +1,8 @@
 import { JSX, useEffect, useRef, useState } from "react";
-import slide1 from "../../assets/ude/slide1.png";
+import slide1 from "../../assets/use/slide1.jpg";
+import slide2 from "../../assets/use/slide2.jpg";
+import slide3 from "../../assets/use/slide3.jpg";
+import slide4 from "../../assets/use/slide4.jpg";
 import { ChevronLeft, ChevronRight } from "react-feather";
 
 export interface ProjectCard {
@@ -15,7 +18,15 @@ export const ProjectsUse = (): JSX.Element => {
     },
     {
       id: "2",
-      image: slide1,
+      image: slide2,
+    },
+    {
+      id: "3",
+      image: slide3,
+    },
+    {
+      id: "4",
+      image: slide4,
     },
   ];
 
@@ -70,21 +81,18 @@ export const ProjectsUse = (): JSX.Element => {
           {/* Viewport */}
           <div
             ref={containerRef}
-            className="overflow-hidden rounded-2xl md:rounded-3xl"
-          >
+            className="overflow-hidden rounded-2xl md:rounded-3xl">
             {/* Track */}
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
                 transform: `translateX(-${currentIndex * slideWidth}px)`,
-              }}
-            >
+              }}>
               {projects.map((project) => (
                 <div
                   key={"proj" + project.id}
                   className="relative flex-shrink-0 overflow-hidden h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px]"
-                  style={{ width: `${slideWidth}px` }}
-                >
+                  style={{ width: `${slideWidth}px` }}>
                   <img
                     src={project.image}
                     className="w-full h-full object-cover"
@@ -100,16 +108,14 @@ export const ProjectsUse = (): JSX.Element => {
             <button
               onClick={goToPrevious}
               className="pointer-events-auto p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 transition hover:scale-110 duration-300"
-              aria-label="Anterior servicio"
-            >
+              aria-label="Anterior servicio">
               <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
             </button>
 
             <button
               onClick={goToNext}
               className="pointer-events-auto p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 transition hover:scale-110 duration-300"
-              aria-label="Siguiente servicio"
-            >
+              aria-label="Siguiente servicio">
               <ChevronRight size={20} className="sm:w-6 sm:h-6" />
             </button>
           </div>
@@ -119,8 +125,7 @@ export const ProjectsUse = (): JSX.Element => {
             <button
               onClick={goToPrevious}
               className="flex lg:hidden pointer-events-auto p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 transition hover:scale-110 duration-300"
-              aria-label="Anterior servicio"
-            >
+              aria-label="Anterior servicio">
               <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
             </button>
             {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
@@ -138,8 +143,7 @@ export const ProjectsUse = (): JSX.Element => {
             <button
               onClick={goToNext}
               className="flex lg:hidden pointer-events-auto p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 transition hover:scale-110 duration-300"
-              aria-label="Siguiente servicio"
-            >
+              aria-label="Siguiente servicio">
               <ChevronRight size={20} className="sm:w-6 sm:h-6" />
             </button>
           </div>

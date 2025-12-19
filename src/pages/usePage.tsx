@@ -3,12 +3,12 @@ import DynamicBackground from "../components/video";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 import bgHero from "../assets/ude/hero.png";
-import { ProjectsUde } from "../components/ude/projectsUde";
 import bgContact from "../assets/ude/bgContact.jpg";
 import { ServiceUse } from "../components/use/ServiceUse";
 import { Use } from "../components/use/use";
 import { ContactusUse } from "../components/use/contacUsUse";
 import { HeroUse } from "../components/use/heroUse";
+import { ProjectsUse } from "../components/use/projectsUse";
 
 export const UsePage = (): JSX.Element => {
   return (
@@ -25,7 +25,7 @@ export const UsePage = (): JSX.Element => {
 
       <ServiceUse />
 
-      <ProjectsUde />
+      <ProjectsUse />
 
       <DynamicBackground
         mediaSource={bgContact}
