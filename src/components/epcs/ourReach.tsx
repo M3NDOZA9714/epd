@@ -15,7 +15,7 @@ export const OurReachEpc = (): JSX.Element => {
         Nuestro Alcance
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full max-w-7xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full max-w-7xl px-4">
         <div className="relative w-full rounded-2xl border-2 border-gray-50 bg-gradient-to-b from-blue-400/35 to-blue-900/35 overflow-hidden aspect-square">
           <div className="absolute h-full w-full flex justify-center items-center text-white text-center font-poppins text-lg sm:text-xl md:text-2xl font-bold leading-normal bg-[linear-gradient(180deg,rgba(0,148,217,0.35)_-72.56%,rgba(0,83,159,0.35)_-39.71%)] p-4">
             INGENIERIA
