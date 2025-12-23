@@ -7,6 +7,7 @@ import { UdePage } from "./pages/udePage";
 import { UsePage } from "./pages/usePage";
 import { UpmPage } from "./pages/upmPage";
 import { UatPage } from "./pages/uatPage";
+import { SuppliesPage } from "./pages/suppliesPage";
 
 export const App = (): JSX.Element => {
   return (
@@ -19,6 +20,7 @@ export const App = (): JSX.Element => {
         <Route path="/use" element={<UsePage />} />
         <Route path="/upm" element={<UpmPage />} />
         <Route path="/uat" element={<UatPage />} />
+        <Route path="/suministros" element={<SuppliesPage />} />
       </Routes>
     </BrowserRouter>
   );
